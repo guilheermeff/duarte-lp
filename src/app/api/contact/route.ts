@@ -12,6 +12,8 @@ export async function POST(request: Request) {
       );
     }
 
+    console.log("[v0] Sending to webhook URL:", webhookUrl);
+
     const response = await fetch(webhookUrl, {
       method: "POST",
       headers: {
@@ -20,8 +22,11 @@ export async function POST(request: Request) {
       body: JSON.stringify(body),
     });
 
+    console.log("[v0] Webhook response status:", response.status);
+
     if (!response.ok) {
       console.error("[v0] N8N webhook error:", response.status);
+      console.error("[v0] Webhook response:", await response.text());
       return Response.json(
         { error: "Failed to submit form" },
         { status: response.status }
