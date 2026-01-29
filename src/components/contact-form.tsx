@@ -30,21 +30,18 @@ export const ContactForm = () => {
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch(
-        process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL || "",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            fullName: formData.fullName,
-            phone: formData.phone,
-            message: formData.message,
-            timestamp: new Date().toISOString(),
-          }),
-        }
-      );
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          phone: formData.phone,
+          message: formData.message,
+          timestamp: new Date().toISOString(),
+        }),
+      });
 
       if (response.ok) {
         setSubmitStatus("success");
