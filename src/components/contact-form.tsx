@@ -60,8 +60,14 @@ export const ContactForm = () => {
     const phoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
     const cleanPhone = formData.phone.replace(/\D/g, "");
     
+    console.log("[v0] Phone value:", formData.phone);
+    console.log("[v0] Clean phone:", cleanPhone);
+    console.log("[v0] Regex test:", phoneRegex.test(formData.phone));
+    console.log("[v0] Phone length:", cleanPhone.length);
+    
     // Aceita 10 dígitos (fixo) ou 11 dígitos (celular)
     if (!phoneRegex.test(formData.phone) || (cleanPhone.length !== 10 && cleanPhone.length !== 11)) {
+      console.log("[v0] Validation failed");
       setSubmitStatus("error");
       setTimeout(() => setSubmitStatus("idle"), 3000);
       return;
