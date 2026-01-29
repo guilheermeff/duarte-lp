@@ -29,8 +29,8 @@ const HeroSection = () => {
           {/* Image - Full width */}
           <div className="aspect-video overflow-hidden rounded-lg shadow-lg">
             <Image
-              src="/img1-hero.png"
-              alt="Consultoria jurídica"
+              src="/hero-law-office.jpg"
+              alt="Consultoria jurídica - escritório moderno"
               width={600}
               height={400}
               sizes="100vw"
@@ -44,8 +44,8 @@ const HeroSection = () => {
           {/* Left: Image */}
           <div className="aspect-square overflow-hidden rounded-lg shadow-lg">
             <Image
-              src="/img1-hero.png"
-              alt="Consultoria jurídica"
+              src="/hero-law-office.jpg"
+              alt="Consultoria jurídica - escritório moderno"
               width={500}
               height={500}
               sizes="(max-width: 1280px) 50vw, 40vw"
