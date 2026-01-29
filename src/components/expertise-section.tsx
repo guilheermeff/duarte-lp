@@ -24,9 +24,7 @@ const ExpertiseSection = () => {
               Previdenciário
             </h3>
             <p className="text-sm leading-relaxed text-gray-600">
-              Atuação em benefícios do INSS, aposentadorias e revisões,
-              assegurando que cada direito previdenciário seja corretamente
-              reconhecido.
+              Consultoria Especializada em Aposentadoria e Auxílio-Doença: Saiba Como Garantir seus Direitos
             </p>
             <ul className="text-sm text-gray-600 space-y-2">
               <li className="flex items-start gap-2">
