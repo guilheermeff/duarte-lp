@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { SubmissionModal } from "@/components/submission-modal";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -106,8 +107,13 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="w-full space-y-6">
-      <form onSubmit={handleSubmit} className="w-full space-y-4">
+    <>
+      <SubmissionModal
+        status={submitStatus}
+        onClose={() => setSubmitStatus("idle")}
+      />
+      <div className="w-full space-y-6">
+        <form onSubmit={handleSubmit} className="w-full space-y-4">
       <div>
         <label htmlFor="fullName" className="sr-only">
           Nome completo
@@ -176,6 +182,7 @@ export const ContactForm = () => {
         </div>
       )}
     </form>
-    </div>
+      </div>
+    </>
   );
 };
