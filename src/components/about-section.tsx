@@ -1,62 +1,67 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useState } from "react";
 
 const AboutSection = () => {
+  const [touchedId, setTouchedId] = useState<string | null>(null);
+
+  const teamMembers = [
+    {
+      id: "waleska",
+      name: "Dra. Waleska Iannuzzi",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dra%20Waleska-1GvQO6gXeNJFbOwqr99FCRXFtX5hQo.jpg",
+    },
+    {
+      id: "cayo",
+      name: "Dr. Cayo Duarte",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr%20Cayo-0CGFlr8xhYfeTnpqrvVhl7jmLnkqiI.jpg",
+    },
+    {
+      id: "taize",
+      name: "Dra. Taize Rocha",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dra%20Taize-SJRjxk7MU6WKQL06xEB8UdNOMOc7A2.jpg",
+    },
+    {
+      id: "anna-julia",
+      name: "Dra. Anna Julia",
+      image: "/dra-anna-julia.jpg",
+    },
+  ];
+
   return (
-    <section className="relative  py-16">
+    <section className="relative py-16">
       <div>
         <div className="flex items-center space-x-2 mb-16">
           <span className="h-px w-12 bg-black"></span>
-          <span className="text-sm tracking-wider">Sobre nós</span>
+          <span className="text-sm tracking-wider">Nossa Equipe</span>
         </div>
 
         <div className="space-y-12">
           {/* Lawyers Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Dra. Waleska Iannuzzi */}
-            <div className="flex flex-col items-center space-y-4">
-              <div className="w-full aspect-square overflow-hidden rounded-lg">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dra%20Waleska-1GvQO6gXeNJFbOwqr99FCRXFtX5hQo.jpg"
-                  alt="Dra. Waleska Iannuzzi"
-                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
-                  loading="lazy"
-                />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {teamMembers.map((member) => (
+              <div key={member.id} className="flex flex-col items-center space-y-4">
+                <div
+                  className="w-full aspect-square overflow-hidden rounded-lg cursor-pointer"
+                  onTouchStart={() => setTouchedId(member.id)}
+                  onTouchEnd={() => setTouchedId(null)}
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className={`w-full h-full object-cover object-top transition-all duration-500 ${
+                      touchedId === member.id ? "grayscale-0" : "grayscale hover:grayscale-0"
+                    }`}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg font-light text-black">{member.name}</h3>
+                </div>
               </div>
-              <div className="text-center">
-                <h3 className="text-lg font-light text-black">Dra. Waleska Iannuzzi</h3>
-              </div>
-            </div>
-
-            {/* Dr. Cayo Duarte */}
-            <div className="flex flex-col items-center space-y-4">
-              <div className="w-full aspect-square overflow-hidden rounded-lg">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr%20Cayo-0CGFlr8xhYfeTnpqrvVhl7jmLnkqiI.jpg"
-                  alt="Dr. Cayo Duarte"
-                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-light text-black">Dr. Cayo Duarte</h3>
-              </div>
-            </div>
-
-            {/* Dra. Taize Rocha */}
-            <div className="flex flex-col items-center space-y-4">
-              <div className="w-full aspect-square overflow-hidden rounded-lg">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dra%20Taize-SJRjxk7MU6WKQL06xEB8UdNOMOc7A2.jpg"
-                  alt="Dra. Taize Rocha"
-                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="text-center">
-                <h3 className="text-lg font-light text-black">Dra. Taize Rocha</h3>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 md:gap-16">
