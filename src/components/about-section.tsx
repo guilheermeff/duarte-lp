@@ -11,12 +11,53 @@ const AboutSection = () => {
         </div>
 
         <div className="space-y-12">
-          <img
-            className="w-full rounded-lg grayscale"
-            src="https://images.unsplash.com/photo-1530099486328-e021101a494a?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="team image"
-            loading="lazy"
-          />
+          {/* Lawyers Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Dra. Waleska Iannuzzi */}
+            <div className="flex flex-col items-center space-y-4">
+              <div className="w-full aspect-square overflow-hidden rounded-lg">
+                <img
+                  src="/waleska-iannuzzi.jpg"
+                  alt="Dra. Waleska Iannuzzi"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-light text-black">Dra. Waleska Iannuzzi</h3>
+              </div>
+            </div>
+
+            {/* Dr. Cayo Duarte */}
+            <div className="flex flex-col items-center space-y-4">
+              <div className="w-full aspect-square overflow-hidden rounded-lg">
+                <img
+                  src="/cayo-duarte.jpg"
+                  alt="Dr. Cayo Duarte"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-light text-black">Dr. Cayo Duarte</h3>
+              </div>
+            </div>
+
+            {/* Dra. Taize Rocha */}
+            <div className="flex flex-col items-center space-y-4">
+              <div className="w-full aspect-square overflow-hidden rounded-lg">
+                <img
+                  src="/taize-rocha.jpg"
+                  alt="Dra. Taize Rocha"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className="text-lg font-light text-black">Dra. Taize Rocha</h3>
+              </div>
+            </div>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2 md:gap-16">
             <h2 className="text-4xl font-light leading-tight tracking-tight">
