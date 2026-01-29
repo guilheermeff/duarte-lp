@@ -11,9 +11,7 @@ const DifferentialsSection = () => {
           </span>
         </div>
         <h2 className="text-5xl font-light leading-tight tracking-tight">
-          NOSSOS
-          <br />
-          DIFERENCIAIS
+          NOSSOS DIFERENCIAIS
         </h2>
       </div>
 

@@ -4,6 +4,7 @@ import HeroSection from "@/components/hero-section";
 import AboutSection from "@/components/about-section";
 import ExpertiseSection from "@/components/expertise-section";
 import DifferentialsSection from "@/components/differentials-section";
+import ContactCTASection from "@/components/contact-cta-section";
 import { ContactButtonGroup } from "@/components/ui/contact-button-group";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -50,6 +51,8 @@ export default function Home() {
         <DifferentialsSection />
         <FAQsThree />
       </main>
+
+      <ContactCTASection />
 
       <CTA />
 
