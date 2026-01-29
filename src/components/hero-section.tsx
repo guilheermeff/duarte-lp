@@ -34,7 +34,7 @@ const HeroSection = () => {
               width={600}
               height={400}
               sizes="100vw"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover grayscale"
             />
           </div>
         </div>
@@ -49,7 +49,7 @@ const HeroSection = () => {
               width={500}
               height={500}
               sizes="(max-width: 1280px) 50vw, 40vw"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover grayscale"
             />
           </div>
 
