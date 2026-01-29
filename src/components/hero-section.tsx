@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact-form";
@@ -28,13 +27,11 @@ const HeroSection = () => {
 
           {/* Image - Full width */}
           <div className="aspect-video overflow-hidden rounded-lg shadow-lg">
-            <Image
+            <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dr%20cayo%20hero-c9QFzTta0B2isydHDIy0IcLSSGGgsg.jpg"
               alt="Dr. Cayo Duarte - Consultor Jurídico"
-              width={600}
-              height={400}
-              sizes="100vw"
               className="h-full w-full object-cover grayscale"
+              loading="lazy"
             />
           </div>
         </div>
@@ -43,13 +40,11 @@ const HeroSection = () => {
         <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
           {/* Left: Image */}
           <div className="aspect-square overflow-hidden rounded-lg shadow-lg">
-            <Image
+            <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dr%20cayo%20hero-c9QFzTta0B2isydHDIy0IcLSSGGgsg.jpg"
               alt="Dr. Cayo Duarte - Consultor Jurídico"
-              width={500}
-              height={500}
-              sizes="(max-width: 1280px) 50vw, 40vw"
               className="h-full w-full object-cover grayscale"
+              loading="lazy"
             />
           </div>
 
