@@ -40,7 +40,7 @@ const HeroSection = () => {
         </div>
 
         {/* Desktop Layout: 2 Columns */}
-        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
           {/* Left: Image */}
           <div className="aspect-square overflow-hidden rounded-lg shadow-lg">
             <Image
