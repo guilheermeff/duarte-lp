@@ -19,7 +19,7 @@ const AboutSection = () => {
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dra%20Waleska-1GvQO6gXeNJFbOwqr99FCRXFtX5hQo.jpg"
                   alt="Dra. Waleska Iannuzzi"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                 />
               </div>
@@ -34,7 +34,7 @@ const AboutSection = () => {
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr%20Cayo-0CGFlr8xhYfeTnpqrvVhl7jmLnkqiI.jpg"
                   alt="Dr. Cayo Duarte"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                 />
               </div>
@@ -49,7 +49,7 @@ const AboutSection = () => {
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dra%20Taize-SJRjxk7MU6WKQL06xEB8UdNOMOc7A2.jpg"
                   alt="Dra. Taize Rocha"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                 />
               </div>
