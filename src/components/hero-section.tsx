@@ -16,68 +16,49 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="relative px-6 lg:px-8 mx-auto max-w-7xl pt-12">
-        {/* Hero Content Grid */}
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 mb-16">
-          {/* Left: Heading */}
-          <div>
-            <h1 className="text-4xl lg:text-5xl font-light leading-tight tracking-tight text-white">
-              Tornamos o Direito mais próximo de quem precisa.
-            </h1>
-          </div>
+        {/* Mobile Layout: Stacked */}
+        <div className="lg:hidden space-y-8">
+          {/* Heading */}
+          <h1 className="text-4xl font-light leading-tight tracking-tight text-white">
+            Pronto para resolver sua questão jurídica?
+          </h1>
 
-          {/* Right: Form */}
-          <div className="flex flex-col justify-center">
-            <ContactForm />
+          {/* Form */}
+          <ContactForm />
+
+          {/* Image - Full width */}
+          <div className="aspect-video overflow-hidden rounded-lg shadow-lg">
+            <Image
+              src="/img1-hero.png"
+              alt="Consultoria jurídica"
+              width={600}
+              height={400}
+              sizes="100vw"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 lg:gap-6">
-          {/* Image 1 - Small square on left */}
-          <div className="aspect-square overflow-hidden rounded-lg shadow-lg transform transition-transform hover:scale-105">
+        {/* Desktop Layout: 2 Columns */}
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+          {/* Left: Image */}
+          <div className="aspect-square overflow-hidden rounded-lg shadow-lg">
             <Image
               src="/img1-hero.png"
-              alt="Legal consultation"
-              width={300}
-              height={300}
-              sizes="(max-width: 768px) 25vw, 20vw"
-              className="h-full w-full object-cover hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
-
-          {/* Image 2 - Large vertical in center-left */}
-          <div className="aspect-[3/5] overflow-hidden rounded-lg shadow-lg transform transition-transform hover:scale-105">
-            <Image
-              src="/img2-hero.png"
-              alt="Lady Justice statue"
-              width={300}
+              alt="Consultoria jurídica"
+              width={500}
               height={500}
-              sizes="(max-width: 768px) 25vw, 20vw"
-              className="h-full w-full object-cover hover:grayscale-0 transition-all duration-500"
+              sizes="(max-width: 1280px) 50vw, 40vw"
+              className="h-full w-full object-cover"
             />
           </div>
 
-          {/* Image 3 - Large vertical in center-right */}
-          <div className="aspect-[3/5] overflow-hidden rounded-lg shadow-lg transform transition-transform hover:scale-105">
-            <Image
-              src="/img3-hero.png"
-              alt="Scales of justice"
-              width={300}
-              height={500}
-              sizes="(max-width: 768px) 25vw, 20vw"
-              className="h-full w-full object-cover hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
-
-          {/* Image 4 - Small square on right */}
-          <div className="aspect-square overflow-hidden rounded-lg shadow-lg transform transition-transform hover:scale-105">
-            <Image
-              src="/img4-hero.png"
-              alt="Justice statue detail"
-              width={300}
-              height={300}
-              sizes="(max-width: 768px) 25vw, 20vw"
-              className="h-full w-full object-cover hover:grayscale-0 transition-all duration-500"
-            />
+          {/* Right: Heading and Form */}
+          <div className="space-y-8">
+            <h1 className="text-5xl font-light leading-tight tracking-tight text-white">
+              Pronto para resolver sua questão jurídica?
+            </h1>
+            <ContactForm />
           </div>
         </div>
       </div>
