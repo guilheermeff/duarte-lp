@@ -26,6 +26,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "DUARTE & IANNUZZI ADVOCACIA",
   description: "Advocacia estratégica para soluções inteligentes e eficazes.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
