@@ -28,8 +28,8 @@ const HeroSection = () => {
           {/* Image - Full width */}
           <div className="aspect-video overflow-hidden rounded-lg shadow-lg">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dr%20cayo%20hero-c9QFzTta0B2isydHDIy0IcLSSGGgsg.jpg"
-              alt="Dr. Cayo Duarte - Consultor Jurídico"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/taize-hero-caOIh2FI6Jb6h8AqBZfW2PRrvF1Vlu.jpg"
+              alt="Dra. Taize Rocha - Consultora Jurídica"
               className="h-full w-full object-cover object-top grayscale"
               loading="lazy"
             />
@@ -41,8 +41,8 @@ const HeroSection = () => {
           {/* Left: Image */}
           <div className="aspect-square overflow-hidden rounded-lg shadow-lg">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dr%20cayo%20hero-c9QFzTta0B2isydHDIy0IcLSSGGgsg.jpg"
-              alt="Dr. Cayo Duarte - Consultor Jurídico"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/taize-hero-caOIh2FI6Jb6h8AqBZfW2PRrvF1Vlu.jpg"
+              alt="Dra. Taize Rocha - Consultora Jurídica"
               className="h-full w-full object-cover object-top grayscale"
               loading="lazy"
             />
