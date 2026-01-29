@@ -28,6 +28,20 @@ const ExpertiseSection = () => {
               assegurando que cada direito previdenciário seja corretamente
               reconhecido.
             </p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li className="flex items-start gap-2">
+                <span className="text-[#c9ad7c] font-light mt-1">•</span>
+                <span>Auxílio doença</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#c9ad7c] font-light mt-1">•</span>
+                <span>Aposentadoria por invalidez</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#c9ad7c] font-light mt-1">•</span>
+                <span>Salário maternidade</span>
+              </li>
+            </ul>
             <Link
               href="https://wa.me/5592996037337"
               target="_blank"
@@ -74,6 +88,24 @@ const ExpertiseSection = () => {
               ênfase em direitos rescisórios, horas extras e reconhecimento de
               vínculos.
             </p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li className="flex items-start gap-2">
+                <span className="text-[#c9ad7c] font-light mt-1">•</span>
+                <span>Rescisão indireta</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#c9ad7c] font-light mt-1">•</span>
+                <span>Home office</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#c9ad7c] font-light mt-1">•</span>
+                <span>Ausência de anotação na carteira de trabalho</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#c9ad7c] font-light mt-1">•</span>
+                <span>Pejotização</span>
+              </li>
+            </ul>
             <Link
               href="https://wa.me/5592996037337"
               target="_blank"
