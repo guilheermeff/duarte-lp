@@ -18,14 +18,46 @@ export const ContactForm = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+
+    if (name === "phone") {
+      // Remove caracteres não numéricos
+      const cleanPhone = value.replace(/\D/g, "");
+
+      // Aplica máscara: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
+      let formattedPhone = "";
+      if (cleanPhone.length > 0) {
+        if (cleanPhone.length <= 2) {
+          formattedPhone = `(${cleanPhone}`;
+        } else if (cleanPhone.length <= 7) {
+          formattedPhone = `(${cleanPhone.slice(0, 2)}) ${cleanPhone.slice(2)}`;
+        } else if (cleanPhone.length <= 11) {
+          formattedPhone = `(${cleanPhone.slice(0, 2)}) ${cleanPhone.slice(2, 7)}-${cleanPhone.slice(7)}`;
+        }
+      }
+
+      setFormData((prev) => ({
+        ...prev,
+        [name]: formattedPhone,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Validar telefone brasileiro: (XX) XXXXX-XXXX (11 dígitos)
+    const phoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setSubmitStatus("error");
+      setTimeout(() => setSubmitStatus("idle"), 3000);
+      return;
+    }
+
     setIsLoading(true);
     setSubmitStatus("idle");
 
@@ -134,7 +166,7 @@ export const ContactForm = () => {
 
       {submitStatus === "error" && (
         <div className="text-sm text-red-600 text-center">
-          Erro ao enviar mensagem. Tente novamente.
+          Erro ao enviar mensagem. Verifique se o telefone está no formato correto (XX) XXXXX-XXXX.
         </div>
       )}
     </form>
