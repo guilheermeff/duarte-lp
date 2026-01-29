@@ -19,8 +19,11 @@ const HeroSection = () => {
         <div className="lg:hidden space-y-8">
           {/* Heading */}
           <h1 className="text-4xl font-light leading-tight tracking-tight text-white">
-            Pronto para resolver sua questão jurídica?
+            Especialistas em Aposentadoria e Benefícios no INSS
           </h1>
+          <p className="text-sm text-white/80 leading-relaxed">
+            Ajudamos pessoas como você, que está passando por algum problema previdenciário e precisa de um advogado especialista em INSS!
+          </p>
 
           {/* Form */}
           <ContactForm />
@@ -50,9 +53,14 @@ const HeroSection = () => {
 
           {/* Right: Heading and Form */}
           <div className="space-y-8">
-            <h1 className="text-5xl font-light leading-tight tracking-tight text-white">
-              Pronto para resolver sua questão jurídica?
-            </h1>
+            <div>
+              <h1 className="text-5xl font-light leading-tight tracking-tight text-white">
+                Especialistas em Aposentadoria e Benefícios no INSS
+              </h1>
+              <p className="text-sm text-white/80 leading-relaxed mt-4">
+                Ajudamos pessoas como você, que está passando por algum problema previdenciário e precisa de um advogado especialista em INSS!
+              </p>
+            </div>
             <ContactForm />
           </div>
         </div>

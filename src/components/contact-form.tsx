@@ -164,7 +164,7 @@ export const ContactForm = () => {
         disabled={isLoading}
         className="w-full rounded-full"
       >
-        {isLoading ? "Enviando..." : "Fale com um advogado"}
+        {isLoading ? "Enviando..." : "Preciso de ajuda"}
       </Button>
 
       {submitStatus === "success" && (
