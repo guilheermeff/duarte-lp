@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ContactForm } from "@/components/contact-form";
 
 const HeroSection = () => {
   return (
@@ -24,38 +25,9 @@ const HeroSection = () => {
             </h1>
           </div>
 
-          {/* Right: Description and CTA */}
-          <div className="flex flex-col justify-center space-y-8">
-            <p className="text-sm leading-relaxed text-white/90">
-              O escritório Duarte & Iannuzzi nasceu para aproximar o cidadão do
-              Direito e oferecer orientação jurídica acessível, em Manaus e em
-              todo o Brasil.
-            </p>
-            <div>
-              <Button asChild className="rounded-full">
-                <Link
-                  href="https://wa.me/5592996037337"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-light  transition-all hover:gap-4 "
-                >
-                  Fale com um advogado
-                  <svg
-                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </Link>
-              </Button>
-            </div>
+          {/* Right: Form */}
+          <div className="flex flex-col justify-center">
+            <ContactForm />
           </div>
         </div>
 
