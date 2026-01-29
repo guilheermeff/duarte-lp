@@ -6,7 +6,7 @@ const ExpertiseSection = () => {
       <div className="mb-16">
         <div className="flex items-center space-x-2 mb-8">
           <span className="h-px w-12 bg-black"></span>
-          <span className="text-sm tracking-wider">EXPERTISE</span>
+          <span className="text-sm tracking-wider">ESPECIALIZAÇÃO</span>
         </div>
         <h2 className="text-5xl font-light leading-tight tracking-tight">
           ÁREAS DE ATUAÇÃO
