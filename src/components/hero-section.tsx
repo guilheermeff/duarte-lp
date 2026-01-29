@@ -30,7 +30,7 @@ const HeroSection = () => {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dr%20cayo%20hero-c9QFzTta0B2isydHDIy0IcLSSGGgsg.jpg"
               alt="Dr. Cayo Duarte - Consultor Jurídico"
-              className="h-full w-full object-cover grayscale"
+              className="h-full w-full object-cover object-top grayscale"
               loading="lazy"
             />
           </div>
@@ -43,7 +43,7 @@ const HeroSection = () => {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dr%20cayo%20hero-c9QFzTta0B2isydHDIy0IcLSSGGgsg.jpg"
               alt="Dr. Cayo Duarte - Consultor Jurídico"
-              className="h-full w-full object-cover grayscale"
+              className="h-full w-full object-cover object-top grayscale"
               loading="lazy"
             />
           </div>
