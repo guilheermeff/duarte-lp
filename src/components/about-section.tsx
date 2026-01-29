@@ -9,14 +9,14 @@ const AboutSection = () => {
 
   const teamMembers = [
     {
-      id: "waleska",
-      name: "Dra. Waleska Iannuzzi",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dra%20Waleska-1GvQO6gXeNJFbOwqr99FCRXFtX5hQo.jpg",
-    },
-    {
       id: "cayo",
       name: "Dr. Cayo Duarte",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dr%20Cayo-0CGFlr8xhYfeTnpqrvVhl7jmLnkqiI.jpg",
+    },
+    {
+      id: "waleska",
+      name: "Dra. Waleska Iannuzzi",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dra%20Waleska-1GvQO6gXeNJFbOwqr99FCRXFtX5hQo.jpg",
     },
     {
       id: "taize",
