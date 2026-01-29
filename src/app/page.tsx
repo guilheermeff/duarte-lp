@@ -1,4 +1,3 @@
-import CTA from "@/components/cta";
 import FAQsThree from "@/components/faqt";
 import HeroSection from "@/components/hero-section";
 import AboutSection from "@/components/about-section";
@@ -53,8 +52,6 @@ export default function Home() {
       </main>
 
       <ContactCTASection />
-
-      <CTA />
 
       <footer>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12">

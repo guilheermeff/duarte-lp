@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="lg:hidden space-y-8">
           {/* Heading */}
           <h1 className="text-4xl font-light leading-tight tracking-tight text-white">
-            Especialistas em Aposentadoria e Benefícios no INSS
+            Especialistas em benefícios e aposentadoria no INSS
           </h1>
           <p className="text-sm text-white/80 leading-relaxed">
             Ajudamos pessoas como você, que está passando por algum problema previdenciário e precisa de um advogado especialista em INSS!

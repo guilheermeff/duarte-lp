@@ -107,9 +107,6 @@ export const ContactForm = () => {
 
   return (
     <div className="w-full space-y-6">
-      <p className="text-sm text-white/80 leading-relaxed">
-        Nossos advogados estão sempre à disposição para orientá-lo. Preencha o formulário e entraremos em contato em breve.
-      </p>
       <form onSubmit={handleSubmit} className="w-full space-y-4">
       <div>
         <label htmlFor="fullName" className="sr-only">
