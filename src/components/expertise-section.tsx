@@ -9,9 +9,7 @@ const ExpertiseSection = () => {
           <span className="text-sm tracking-wider">EXPERTISE</span>
         </div>
         <h2 className="text-5xl font-light leading-tight tracking-tight">
-          ÁREAS DE
-          <br />
-          ATUAÇÃO
+          ÁREAS DE ATUAÇÃO
         </h2>
       </div>
 
