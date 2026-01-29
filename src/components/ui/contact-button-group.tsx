@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Instagram, MessageCircle, Mail, MapPin, Menu } from "lucide-react";
+import { Instagram, MessageCircle, MapPin, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import { LocationModal } from "./location-modal";
@@ -66,17 +66,6 @@ export function ContactButtonGroup({
           <Button
             variant="outline"
             size="lg"
-            asChild
-            className="rounded-none border-r-0 bg-transparent"
-          >
-            <Link href={emailUrl}>
-              <Mail className="h-5 w-5 mr-2" />
-            </Link>
-          </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
             onClick={() => setLocationModalOpen(true)}
             className="rounded-l-none"
           >
@@ -134,18 +123,6 @@ export function ContactButtonGroup({
                 >
                   <MessageCircle className="h-5 w-5 mr-3" />
                   WhatsApp
-                </Link>
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                asChild
-                className="w-full justify-start bg-transparent"
-              >
-                <Link href={emailUrl}>
-                  <Mail className="h-5 w-5 mr-3" />
-                  Email
                 </Link>
               </Button>
 

@@ -66,9 +66,7 @@ export default function FAQsThree() {
                 <span className="text-sm tracking-wider">FAQ</span>
               </div>
               <h2 className="text-5xl font-light leading-tight tracking-tight text-black">
-                DÚVIDAS
-                <br />
-                COMUNS
+                DÚVIDAS COMUNS
               </h2>
               <p className="text-[#7d7d7d] mt-6 text-sm leading-relaxed">
                 Não encontrou o que procura? Entre em contato conosco{" "}
