@@ -40,7 +40,7 @@ const AboutSection = () => {
 
         <div className="space-y-12">
           {/* Lawyers Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-8">
             {teamMembers.map((member) => (
               <div key={member.id} className="flex flex-col items-center space-y-4">
                 <div
