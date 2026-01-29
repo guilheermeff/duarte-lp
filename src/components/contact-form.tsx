@@ -23,14 +23,20 @@ export const ContactForm = () => {
       // Remove caracteres não numéricos
       const cleanPhone = value.replace(/\D/g, "");
 
-      // Aplica máscara: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
+      // Limita a 11 dígitos (padrão brasileiro)
+      if (cleanPhone.length > 11) return;
+
+      // Aplica máscara apenas quando tem dígitos suficientes
       let formattedPhone = "";
       if (cleanPhone.length > 0) {
         if (cleanPhone.length <= 2) {
           formattedPhone = `(${cleanPhone}`;
-        } else if (cleanPhone.length <= 7) {
+        } else if (cleanPhone.length <= 6) {
           formattedPhone = `(${cleanPhone.slice(0, 2)}) ${cleanPhone.slice(2)}`;
-        } else if (cleanPhone.length <= 11) {
+        } else if (cleanPhone.length <= 10) {
+          formattedPhone = `(${cleanPhone.slice(0, 2)}) ${cleanPhone.slice(2, 6)}-${cleanPhone.slice(6)}`;
+        } else {
+          // Para 11 dígitos (celular): (XX) XXXXX-XXXX
           formattedPhone = `(${cleanPhone.slice(0, 2)}) ${cleanPhone.slice(2, 7)}-${cleanPhone.slice(7)}`;
         }
       }
@@ -50,9 +56,12 @@ export const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Validar telefone brasileiro: (XX) XXXXX-XXXX (11 dígitos)
+    // Validar telefone brasileiro: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX
     const phoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
-    if (!phoneRegex.test(formData.phone)) {
+    const cleanPhone = formData.phone.replace(/\D/g, "");
+    
+    // Aceita 10 dígitos (fixo) ou 11 dígitos (celular)
+    if (!phoneRegex.test(formData.phone) || (cleanPhone.length !== 10 && cleanPhone.length !== 11)) {
       setSubmitStatus("error");
       setTimeout(() => setSubmitStatus("idle"), 3000);
       return;
